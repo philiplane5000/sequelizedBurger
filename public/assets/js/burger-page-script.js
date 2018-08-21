@@ -31,7 +31,7 @@ $(document).ready(function () {
         let customerName = $(`#customer-${burgerID}`).val().trim();
 
         if (!$(`#customer-${burgerID}`).val().trim()) {
-            alert("ENTER CUSTOMER NAME (YOUR NAME...)")
+            alert("Customer Name Field Blank")
             return
         }
 

@@ -2,15 +2,21 @@ const db = require("../models");
 
 module.exports = function (app) {
 
+    let handlebarsObj = {};
+
     app.get("/", function (req, res) {
+
         db.Burger.findAll({})
             .then(function (data) {
-                let handlebarsObj = {
-                    burgers: data
-                }
-                res.render("index", handlebarsObj);
+                handlebarsObj.burgers = data;
             });
-    });
+        db.Customer.findAll({})
+            .then(function (data) {
+                handlebarsObj.customers = data;
+                console.log("HandlebarsObject: " + JSON.stringify(handlebarsObj, undefined, 2));
+                res.render("index", handlebarsObj)
+            })
+    })
 
     app.post("/add/burger", function (req, res) {
         db.Burger.create({ burger_name: req.body.burger_name }).then(function (result) {
@@ -36,9 +42,6 @@ module.exports = function (app) {
         })
 
     });
-
-
-
 
 }
 
