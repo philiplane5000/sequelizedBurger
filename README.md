@@ -1,5 +1,5 @@
 
-# QUIK-BURGER
+# QUIK-BURGER (SEQUELIZED)
 
 ### About
 
