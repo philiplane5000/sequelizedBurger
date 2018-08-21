@@ -50,11 +50,15 @@
                     {{!-- HERE: INCLUDE CUSTOMER INFORMATION TO GO ALONG WITH THE BURGER DEVOURED --}}
                      {{#each burgers}} {{#if devoured}}
                     <li class="list-group-item list-group-item-dark" data-id="{{id}}">
-                        {{burger_name}} eaten by:
+                        {{burger_name}}
                     </li>
-                    {{!-- <li class="list-group-item list group-item-dark" data-id="{{customers.BurgerId}}">
-                        {{customers.name}}
-                    </li> --}}
+
+                    {{!-- {{#each customers}} {{#if {{BurgerId}} === {{id}}}}
+                    <li class="list-group-item list group-item-dark" data-id="{{BurgerId}}">
+                        Eaten by: {{name}}
+                    </li>
+                    {{/each}} --}}
+
                     {{/if}} {{/each}}
 
                 </ul>

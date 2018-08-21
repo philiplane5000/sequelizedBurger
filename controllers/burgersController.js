@@ -6,16 +6,18 @@ module.exports = function (app) {
 
     app.get("/", function (req, res) {
 
-        db.Burger.findAll({})
-            .then(function (data) {
-                handlebarsObj.burgers = data;
-            });
         db.Customer.findAll({})
             .then(function (data) {
                 handlebarsObj.customers = data;
-                console.log("HandlebarsObject: " + JSON.stringify(handlebarsObj, undefined, 2));
-                res.render("index", handlebarsObj)
             })
+            
+        db.Burger.findAll({})
+            .then(function (data) {
+                handlebarsObj.burgers = data;
+                // console.log("HandlebarsObject: " + JSON.stringify(handlebarsObj, undefined, 2));
+                res.render("index", handlebarsObj)
+            });
+
     })
 
     app.post("/add/burger", function (req, res) {
