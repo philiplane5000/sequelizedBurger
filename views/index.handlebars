@@ -1,0 +1,65 @@
+<div class="container main-container">
+
+    <div class="jumbotron jumbotron-fluid border-red">
+        <div class="container">
+            <h1 class="display-3 text-center">
+                <i class="fas fa-utensils fa-sm"></i> Quik-Burger</h1>
+            <p class="lead text-center">Eat a burger. Add a burger. Gorge Yourself.</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-4">
+            <div class="burger-box">
+                <h3>Uneaten Burgers</h3>
+                <hr>
+                <ul class="list-group">
+                    {{#each burgers}} {{#unless devoured}}
+                    <li class="list-group-item list-group-item-warning" value="{{id}}">
+                        {{burger_name}}
+                        <a href="#" class="devour-btn" data-id="{{id}}" data-attribute="{{burger_name}}" data-state="{{devoured}}">
+                            <button class="btn btn-sm btn-warning">Devour</button>
+                        </a>
+                    </li>
+                    {{/unless}} {{/each}}
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="burger-img-container text-center">
+                <img src="/assets/img/burger-square-225W.png" class="rounded" alt="burger-on-display">
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="burger-box">
+                <h3>Eaten Burgers</h3>
+                <hr>
+                <ul class="list-group">
+                    {{#each burgers}} {{#if devoured}}
+                    <li class="list-group-item list-group-item-dark" data-id="{{id}}">
+                        {{burger_name}}
+                    </li>
+                    {{/if}} {{/each}}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-5 float-right">
+            <form class="burger-form mt-5 p-3 rounded">
+                <label for="new-burger">
+                    <h5>Add a Burger:</h5>
+                </label>
+                <input name="new-burger" type="text" class="form-control" id="new-burger" placeholder="Enter a burger you want to eat here">
+                <button for="new-burger" class="btn btn-lg btn-info mt-3" id="sub-new">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+
+</div>

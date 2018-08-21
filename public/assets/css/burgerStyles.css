@@ -1,0 +1,66 @@
+html, body {
+    background: #F2994A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}    
+
+.main-container {
+    background-color: rgba(0,0,0,0)
+}
+
+.burger-box {
+    background: #fff;
+    padding: 20px;
+    min-height: 225px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.burger-form {
+    background-color: whitesmoke;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.devour-btn, .devour-btn:visited {
+    color: darkred;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+
+/* //BOOTSTRAP OVERRIDE STYLES:// */
+/******************************/
+
+.jumbotron {
+    background-color: white !important;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.jumbotron-fluid {
+    background-color: #fff !important;
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+    border-bottom: 5px solid #FF0000;
+    border-right: 5px solid #FF0000;
+    border-left: 5px solid #FF0000;
+    outline: 5px solid yellow;
+}
+
+.display-3 {
+    font-family: 'Monoton', cursive;
+}
+
+.col-lg-4 {
+    margin-top: 20px;
+}
+
+#sub-new {
+    background-color: #4BA3F1;
+    border-color: #4BA3F1;
+}
+
+#sub-new:hover, #sub-new:focus, #sub-new:active {
+    background-color: #1260A4;
+    border-color: #1260A4;
+}
