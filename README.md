@@ -5,11 +5,11 @@
 
 * `QUIK-BURGER` is a restaurant app that allows users to choose from existing or input the names of burgers they would like to order/eat.
 
-* Newly created `burgers` appear dynamically on screen under the `Uneaten` menu list.
+* Newly created burgers appear dynamically on screen under the `UNEATEN` menu list.
 
-* Each `Uneaten` burger comes with a `Devour` button.
+* Each `UNEATEN` burger comes with a `DEVOUR` button.
 
-* On click, `Devour` will send the burger over to the `Eaten` list.
+* On click, `DEVOUR` will send the burger over to the `EATEN` list.
 
 ### Summary
 
