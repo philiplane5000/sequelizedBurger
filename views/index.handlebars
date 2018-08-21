@@ -39,6 +39,7 @@
                 <h3>Eaten Burgers</h3>
                 <hr>
                 <ul class="list-group">
+                    {{!-- HERE: INCLUDE CUSTOMER INFORMATION TO GO ALONG WITH THE BURGER DEVOURED --}}
                     {{#each burgers}} {{#if devoured}}
                     <li class="list-group-item list-group-item-dark" data-id="{{id}}">
                         {{burger_name}}
