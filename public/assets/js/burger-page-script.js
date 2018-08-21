@@ -28,11 +28,18 @@ $(document).ready(function () {
         let burgerName = $(this).data("attribute");
         let burgerID = $(this).data("id");
         let devoured = $(this).data("state");
+        let customerName = $(`#customer-${burgerID}`).val().trim();
+
+        if (!$(`#customer-${burgerID}`).val().trim()) {
+            alert("ENTER CUSTOMER NAME (YOUR NAME...)")
+            return
+        }
 
         let devourBurger = {
             burger_name: burgerName,
             id: burgerID,
-            devoured: devoured
+            devoured: devoured,
+            customer_name: customerName
         }
 
         $.ajax({

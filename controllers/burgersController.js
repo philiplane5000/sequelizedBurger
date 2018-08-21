@@ -17,17 +17,22 @@ module.exports = function (app) {
             res.status(200);
             res.json({ id: result.id });
         })
+
     })
 
     app.put("/update/burger", function (req, res) {
-        db.Burger.update({devoured: true}, {
+        db.Burger.update({ devoured: true }, {
             where: {
                 id: req.body.id
             }
         })
-        .then(function(result) {
+            .then(function (result) {
+                res.status(200);
+                res.json({ id: result.id });
+            })
+
+        db.Customer.create({ name: req.body.customer_name, BurgerId: req.body.id }).then(function (result) {
             res.status(200);
-            res.json({ id: result.id });
         })
 
     });
