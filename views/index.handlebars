@@ -34,6 +34,14 @@
                 </ul>
 
             </div>
+
+            <form class="burger-form mt-4 p-3 rounded">
+                <label for="new-burger">
+                    <h5 class="pt-1">Add a Burger:</h5>
+                </label>
+                <input name="new-burger" type="text" class="form-control" id="new-burger" placeholder="Enter a burger you want to eat here">
+                <button for="new-burger" class="btn btn-lg btn-info mt-3" id="sub-new">SUBMIT</button>
+            </form>
         </div>
 
         <div class="col-lg-4">
@@ -47,26 +55,33 @@
                 <h3>Eaten Burgers</h3>
                 <hr>
                 <ul class="list-group">
-                    {{!-- HERE: INCLUDE CUSTOMER INFORMATION TO GO ALONG WITH THE BURGER DEVOURED --}}
-                     {{#each burgers}} {{#if devoured}}
+                    {{#each burgers}} {{#if devoured}}
                     <li class="list-group-item list-group-item-dark" data-id="{{id}}">
-                        {{burger_name}}
+                        {{burger_name}} <span class="burgerNum"><strong>#{{id}}</strong></span>
                     </li>
-
-                    {{!-- {{#each customers}} {{#if {{BurgerId}} === {{id}}}}
-                    <li class="list-group-item list group-item-dark" data-id="{{BurgerId}}">
-                        Eaten by: {{name}}
-                    </li>
-                    {{/each}} --}}
-
                     {{/if}} {{/each}}
 
                 </ul>
             </div>
+
+            <div class="burger-box mt-3">
+                <h3>Burger Eaters</h3>
+                <hr>
+                <ul class="list-group">
+                    {{#each customers}}
+                    <li class="list-group-item list-group-item-light text-right" data-id="{{id}}">
+                        "{{name}}" devoured burger #{{BurgerId}}
+                    </li>
+                    {{/each}}
+
+                </ul>
+            </div>
+
         </div>
 
     </div>
 
+    {{!--
     <div class="row">
         <div class="col-5 float-right">
             <form class="burger-form mt-5 p-3 rounded">
@@ -77,6 +92,6 @@
                 <button for="new-burger" class="btn btn-lg btn-info mt-3" id="sub-new">SUBMIT</button>
             </form>
         </div>
-    </div>
+    </div> --}}
 
 </div>

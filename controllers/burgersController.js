@@ -2,21 +2,22 @@ const db = require("../models");
 
 module.exports = function (app) {
 
-    let handlebarsObj = {};
-
+    
     app.get("/", function (req, res) {
 
-        db.Customer.findAll({})
-            .then(function (data) {
-                handlebarsObj.customers = data;
-            })
-            
-        db.Burger.findAll({})
-            .then(function (data) {
-                handlebarsObj.burgers = data;
-                // console.log("HandlebarsObject: " + JSON.stringify(handlebarsObj, undefined, 2));
-                res.render("index", handlebarsObj)
-            });
+        const handlebarsObj = {};
+
+        const customers = db.Customer.findAll({})
+        const burgers = db.Burger.findAll({})
+
+        Promise
+        .all([customers, burgers])
+        .then(data => {
+            handlebarsObj.customers = data[0];
+            handlebarsObj.burgers = data[1];
+            // res.json(handlebarsObj)
+            res.render("index", handlebarsObj)
+        })
 
     })
 

@@ -6,7 +6,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         },
         devoured: {
-            type: DataTypes.BOOLEAN, /*doube-check*/
+            type: DataTypes.BOOLEAN,
             defaultValue: false
         }
     });

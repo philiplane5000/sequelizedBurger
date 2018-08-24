@@ -28,6 +28,11 @@ html, body {
     margin-right: 10px;
 }
 
+.burgerNum {
+    position: absolute;
+    right: 10px;
+}
+
 /* //BOOTSTRAP OVERRIDE STYLES:// */
 /******************************/
 

@@ -9,9 +9,7 @@ module.exports = function (sequelize, DataTypes) {
 
     Customer.associate = function (models) {
         Customer.belongsTo(models.Burger, {
-            foreignKey: {
-                allowNull: false
-            }
+            targetKey: 'burger_name'
         })
     };
     return Customer;
