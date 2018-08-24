@@ -16,5 +16,5 @@
 
 * The app communicates with a `mysql` database to fetch or store new burger data. The on screen buttons trigger get or post requests via `express` to fetch or update appropriate burger data -- the response is rendered in the view appropriately.
 
-* `QUIK-BURGER` is available to preview live on [Heroku](https://git.heroku.com/hidden-basin-15308.git) 
+* `QUIK-BURGER` is available to preview live on [Heroku](https://hidden-basin-15308.herokuapp.com/) 
 
